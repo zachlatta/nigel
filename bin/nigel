@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+
+program :version, '0.0.1'
+program :description, 'Flood a directory with Nigel Thornberry gifs.'
+ 
+command :flood do |c|
+  c.syntax = 'nigel flood'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'Floods the directory.'
+  c.action do |args, options|
+    Nigel::Commands::Flood.process(options)
+  end
+end
+
