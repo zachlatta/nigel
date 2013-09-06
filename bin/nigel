@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'commander/import'
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
-program :version, '0.0.1'
+require 'commander/import'
+require 'nigel'
+
+program :version, Nigel::VERSION
 program :description, 'Flood a directory with Nigel Thornberry gifs.'
  
 command :flood do |c|
