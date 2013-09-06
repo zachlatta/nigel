@@ -8,13 +8,9 @@ Flood a directory with Nigel Thornberry gifs.
 
 ## Usage
 
-    $ nigel <number of images to grab>
+Flood the current directory with Nigel gifs.
 
-Examples:
-
-    $ nigel 100
-    $ nigel 42
-    $ nigel 9001
+    $ nigel flood
 
 ## Contributing
 
