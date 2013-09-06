@@ -3,10 +3,11 @@ module Nigel
     class Flood
       def self.process(options)
 
+        threads = []
+
         Google::Search::Image.new(
           query: 'Nigel Thornberry').each_with_index do |image, i|
 
-          threads = []
 
           if(image.uri.include? '.gif')
 
@@ -14,9 +15,9 @@ module Nigel
             
             threads << self.fetch(image.uri, "#{ i }.gif")
           end
-
-          threads.each(&:join)
         end
+
+        threads.each(&:join)
       end
 
       private
